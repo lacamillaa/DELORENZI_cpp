@@ -23,7 +23,10 @@ public:
 int main() {
     std::cout << "Hello, World!" << std::endl;
     string nome;
-    cin >> nome;
+    cout << "Inserisci il nome: ";
+    // cin >> nome; // legge fino al primo spazio bianco
+    getline(cin, nome); // legge tutto il buffer
+
     Persona persona(nome, 1);
     persona.stampaDati();
     return 0;
