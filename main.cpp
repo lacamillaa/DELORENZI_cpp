@@ -10,12 +10,19 @@ class Persona {
 
 public:
     Persona(string nome, int eta) {
+        // this è un puntatore all'oggetto corrente
         this->nome = nome;
         this->eta = eta;
+    }
+
+    void stampaDati() {
+        cout << nome << " eta: " << eta << endl;
     }
 };
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
+    Persona p = Persona("John", 1);
+    p.stampaDati();
     return 0;
 }
