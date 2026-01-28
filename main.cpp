@@ -3,28 +3,6 @@
 
 using namespace std;
 
-class Persona {
-    // variabili private
-    string nome;
-    int eta = 0;
-
-public:
-    Persona(string nome, int eta) {
-        // this è un puntatore all'oggetto corrente
-        this->nome = nome;
-        this->eta = eta;
-    }
-
-    void stampaDati() {
-        cout << nome << " eta: " << eta << endl;
-    }
-
-    // distruttore della classe
-    ~Persona() {
-        cout << "~Persona" << endl;
-    };
-};
-
 int main() {
     std::cout << "Hello, World!" << std::endl;
     string nome;
