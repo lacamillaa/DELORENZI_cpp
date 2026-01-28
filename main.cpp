@@ -1,6 +1,8 @@
 #include <array>
 #include <cstring>
 #include <iostream>
+#include <vector>
+
 #include "Persona.h"
 
 using namespace std;
@@ -26,7 +28,18 @@ int main() {
     delete[] arrd; // libera lo spazio dedicato all'array
 
     array<int, 7> arr3 = {1, 2, 3, 4, 5, 6};
+    // memorizzato nello stack
     cout << arr3[0] << endl;
     cout << arr3.size() << endl; // 7
+
+    auto a = new array<int, 7>{1, 2, 3, 4};
+    // memorizzato nello HEAP
+    cout << *a->begin() << endl;
+
+    vector<int> v1 = {1, 2, 3, 4, 5};
+    // memorizzato nello HEAP
+    // possibilità di effettuare un ridimensionamento
+    v1.push_back(6);
+    cout << v1.size() << endl;
     return 0;
 }
